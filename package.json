@@ -5,7 +5,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "tsc -p tsconfig.json --outDir dist",
+    "build": "tsc -p tsconfig.json",
     "test": "jest",
     "test:watch": "jest --watch"
   },

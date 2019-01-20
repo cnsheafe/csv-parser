@@ -13,5 +13,6 @@ export async function readCSV(readPath: string, delimeter: string) {
 }
 
 export async function writeJSON(writePath: string, parsedCsv: Map<string|number, Cell[]>) {
-  await write(writePath, parsedCsv, { encoding: 'utf8' })
+  // TODO: convert map into JSON of form { "columnName": Cell[] } instead of ["columnName", Cell[]]
+  await write(writePath, JSON.stringify([...parsedCsv]), { encoding: 'utf8' })
 }
